@@ -503,3 +503,27 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* HZNX TOP UP - Dark Neon Dropdown */
+
+select,
+select option {
+  background-color: #100b18;
+  color: #ffffff;
+}
+
+select {
+  color-scheme: dark;
+  border: 1px solid #b832a8;
+  border-radius: 12px;
+  outline: none;
+}
+
+select:focus {
+  border-color: #ff3ebf;
+  box-shadow: 0 0 12px rgba(255, 62, 191, 0.35);
+}
+
+select option {
+  padding: 14px;
+}
