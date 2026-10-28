@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090710">
+  <meta name="description" content="HZNX TOP UP - متجر شحن الألعاب الإلكترونية">
+  <title>HZNX TOP UP | Level Up</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background-glow glow-pink"></div>
+  <div class="background-glow glow-purple"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-symbol">H<span>X</span></span>
+      <span class="brand-name">HZNX <b>TOP UP</b></span>
+    </a>
+    <a href="#contact" class="nav-link">تواصل معنا <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <div class="live-label"><span></span> YOUR GAMING DESTINATION</div>
+        <h1>ارفع مستواك<br>وادخل <span class="gradient-text">المنافسة</span></h1>
+        <p>كل اللي تحتاجه للعبتك المفضلة في مكان واحد. اختار لعبتك، حدد الباقة، وجهز طلبك بسهولة.</p>
+        <div class="hero-actions">
+          <a href="#games" class="button button-primary">اكتشف الألعاب <span>←</span></a>
+          <a href="#how" class="button button-ghost">طريقة الطلب</a>
+        </div>
+        <div class="hero-info">
+          <div><strong>HZNX</strong><span>ستايل مختلف</span></div>
+          <div class="info-line"></div>
+          <div><strong>QUICK</strong><span>طلب سهل</span></div>
+          <div class="info-line"></div>
+          <div><strong>GAMING</strong><span>عالمك هنا</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="visual-ring ring-a"></div>
+        <div class="visual-ring ring-b"></div>
+        <div class="visual-card">
+          <div class="visual-card-top"><span>HZNX SYSTEM</span><span class="system-dot"></span></div>
+          <div class="visual-logo">H<span>X</span></div>
+          <div class="visual-divider"></div>
+          <div class="visual-caption">LEVEL UP YOUR GAME</div>
+          <div class="visual-footer"><span>GAMING</span><span>TOP UP</span><span>EST. 2026</span></div>
+        </div>
+        <div class="floating-label floating-one">NEXT LEVEL</div>
+        <div class="floating-label floating-two">HZNX / 001</div>
+      </div>
+    </section>
+
+    <section class="games-section section-wrap" id="games">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">SELECT YOUR GAME</div>
+          <h2>اختار <span class="gradient-text">لعبتك</span></h2>
+          <p>دور على لعبتك وابدأ تجهيز طلبك.</p>
+        </div>
+        <div class="catalog-count"><span id="gamesCount">06</span><small>GAMES</small></div>
+      </div>
+
+      <div class="search-wrap reveal">
+        <span class="search-symbol">⌕</span>
+        <input type="search" id="gameSearch" placeholder="ابحث عن لعبة..." autocomplete="off">
+        <span class="search-label">SEARCH</span>
+      </div>
+
+      <div class="games-grid" id="gamesGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>مفيش لعبة بالاسم ده، جرّب تبحث باسم تاني.</div>
+    </section>
+
+    <section class="order-section section-wrap" id="order">
+      <div class="order-copy reveal">
+        <div class="section-kicker">BUILD YOUR ORDER</div>
+        <h2>جهّز طلبك<br><span class="gradient-text">في ثواني</span></h2>
+        <p>اختار اللعبة والباقة، واكتب معرّف اللاعب. هنجهزلك رسالة تراجعها قبل إرسالها على واتساب.</p>
+        <div class="order-feature"><span class="feature-mark">01</span>
+          <div><b>اختيار واضح</b><small>حدد اللعبة والباقة المطلوبة</small></div>
+        </div>
+        <div class="order-feature"><span class="feature-mark">02</span>
+          <div><b>بيانات طلبك</b><small>راجع الـ Player ID قبل الإرسال</small></div>
+        </div>
+        <div class="order-feature"><span class="feature-mark">03</span>
+          <div><b>تأكيد مباشر</b><small>الطلب بيتبعت للمراجعة على واتساب</small></div>
+        </div>
+      </div>
+
+      <form class="order-form reveal" id="orderForm">
+        <div class="form-top">
+          <div><span class="section-kicker">ORDER PANEL</span>
+            <h3>تفاصيل الطلب</h3>
+          </div>
+          <span class="form-number">HZNX / 01</span>
+        </div>
+
+        <label for="selectedGame">اللعبة</label>
+        <div class="field-wrap">
+          <select id="selectedGame" required>
+            <option value="">اختار اللعبة</option>
+          </select>
+          <span class="field-arrow">⌄</span>
+        </div>
+
+        <label for="playerId">معرّف اللاعب (Player ID)</label>
+        <input class="text-field" id="playerId" type="text" maxlength="80" placeholder="اكتب Player ID هنا" required>
+
+        <label for="packageSelect">الباقة المطلوبة</label>
+        <div class="field-wrap">
+          <select id="packageSelect" required disabled>
+            <option value="">اختار اللعبة الأول</option>
+          </select>
+          <span class="field-arrow">⌄</span>
+        </div>
+
+        <div class="price-panel">
+          <div><span>إجمالي الباقة</span><small>EGP / جنيه مصري</small></div>
+          <strong id="priceDisplay">— <small>EGP</small></strong>
+        </div>
+
+        <button type="submit" class="button button-primary submit-button">تجهيز طلب واتساب <span>↗</span></button>
+        <p class="form-note">الأسعار الحالية تجريبية. راجع السعر النهائي والتوافر مع المتجر قبل الدفع.</p>
+        <div class="form-status" id="formStatus" role="status"></div>
+      </form>
+    </section>
+
+    <section class="steps-section section-wrap" id="how">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">HOW TO ORDER</div>
+          <h2>ببساطة، <span class="gradient-text">ثلاث خطوات</span></h2>
+        </div>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card reveal"><span class="step-number">01</span>
+          <div class="step-line"></div>
+          <h3>اختار اللعبة</h3>
+          <p>اختار لعبتك من الكروت الموجودة في المتجر.</p>
+        </article>
+        <article class="step-card reveal"><span class="step-number">02</span>
+          <div class="step-line"></div>
+          <h3>حدد الباقة</h3>
+          <p>اكتب معرّف اللاعب واختار الباقة المناسبة.</p>
+        </article>
+        <article class="step-card reveal"><span class="step-number">03</span>
+          <div class="step-line"></div>
+          <h3>ابعت طلبك</h3>
+          <p>راجع تفاصيل الطلب وابعتها على واتساب للتأكيد.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section section-wrap reveal" id="contact">
+      <div>
+        <div class="section-kicker">LET'S CONNECT</div>
+        <h2>مستعد للخطوة الجاية؟</h2>
+        <p>تواصل مع HZNX TOP UP للاستفسار عن الباقات والطلبات.</p>
+      </div>
+      <a class="button button-primary" href="https://wa.me/201114590575" target="_blank" rel="noopener">تواصل عبر واتساب
+        <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#" class="brand footer-brand"><span class="brand-symbol">H<span>X</span></span><span
+        class="brand-name">HZNX <b>TOP UP</b></span></a>
+    <p>© 2026 HZNX TOP UP. جميع الحقوق محفوظة.</p>
+    <a href="#games" class="back-top">العودة للأعلى ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
